@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+
+/*    
+//question 1
+ int q;
+ double x,y,i,m,w,z=0;
+ double d,r1=1.234567890123456,r2 = 1.234567890123455;
+ 
+ q=7-(7/3)*3;
+ m= (7.0/3.0)*3.0;
+ i=(7/3);
+ w=7-m;
+ x= 1/3*10.0;
+ y=-1.0/z;
+ d=r1-r2;
+ 
+ cout << q << "\n" << m <<"\n"<< i << "\n" << w << "\n" << x <<"\n" << y << "\n" <<d << "\n";
+ */
+ // question 2
+ 
+ double u = 0.0, v=1.1, w=1.0;
+ 
+ u--;
+ w++;
+ v=v-u;
+ w=w*w+v+w;
+ 
+ cout << u << "\n" << v << "\n" << w << "\n";
+ 
+}
