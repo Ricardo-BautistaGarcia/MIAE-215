@@ -1,0 +1,78 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{
+    /* // first exercize: 
+    
+    int i, count1, count2, count3,n;
+    double A[100], A_ave, sum;
+    double tol = 1.0e-3;
+    cout<< "\ninput up to 100 elements of an array A one at a time.";
+    
+    for(i=0;i<100;i++) {
+        cin>>A[i];
+        if( A[i] < -100 ) break;
+        
+        
+    }
+    n=i;
+    cout <<"\nn=i = "<<n;
+    //Note: If the problem asked to check for errros we should check for the special case where something like -1000 is input immediately giving n = 0;
+    if(n==0) {
+        cout<< "\nerror n == 0";
+        exit(1);
+        //stop the program since there is no point going further
+    }
+    
+    
+    sum=0.0;
+    count1=count2=count3=0;
+    for(i=0;i<n;i++) {
+        sum += A[i];
+        if( A[i] < 10) count1++;
+        if((-1< A[i]) && (A[i] < 2)) count2++;
+        //check if A[i] is approximately equal to 7 (3 digits of precision
+        if( abs(A[i]- 7.0) < tol) count3++; // a typical student mistake hereis to not specify the abs value or tolerance, e.g: if( A[i] ++ 7.0) count3++
+    }
+        
+    A_ave = sum/n;
+    
+    cout << "\nA_ave = " << A_ave;
+    cout << "\ncount1 = " <<count1;
+    cout << "\ncount2 = " <<count2;
+    cout << "\ncount3 = " <<count3;
+    cout << "\ndone.\n";
+    */
+     //second exercize INCOMPLETE
+    int k;
+    
+    while(1) { //infinite loop
+       cout<< "\ninput a value for k comrade (1-3) ? ";
+       cin >> k;
+       
+       if(k>3) {
+           cout << "\ninput is out of range";
+           continue; // skips to the end/beginning for the loop
+       }
+       
+       if (k <=0) {
+           cout<<"\nprogram error, you fool";
+           exit(1); //stop the program
+       }
+          
+    } //continue function sends program here and then the loop starts again
+    
+    if (k==1) {
+        cout << "\nsin(1.0) = " << sin(1.0);
+    } else if (k==2) {
+        cout << "\ncos(1.0) = " << cos(1.0);
+    } else if (k==3) {
+        cout << "\ncos(1.0) = " << exp(1.0);
+    }
+    return 1;
+}
