@@ -48,6 +48,7 @@ int main()
     cout << "\ncount3 = " <<count3;
     cout << "\ndone.\n";
     */
+/*
      //second exercize INCOMPLETE
     int k;
     
@@ -75,4 +76,83 @@ int main()
         cout << "\ncos(1.0) = " << exp(1.0);
     }
     return 1;
+*/
+/*
+//third exercize
+    
+    int i,k;
+    
+    i=6;
+    k=2;
+    
+    if(((i>0)&&(i<k))||(i<7)) cout<< "\ntrue";
+*/
+
+
+}
+
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+//follow this format for the assignments
+
+{
+//Q1. Write a program that inputs a sequence of n doubles drom the keyboard (assume n<=100). 
+//The number n should also be input from the keyboard. 
+//The program then calculates and prints out the largest number of the sequence -- ie find the max value.
+
+    // 1. Declare variables
+    int n,i;
+    double A[100], max_A; // typically arrays go from 0 to n-1
+    
+    // 2. Initialize
+    //nothing for now. We will do n in the next section
+    
+    // 3. Input
+    cout << "\ninput n (1 to 100) ? ";
+    cin >> n;
+    
+    // if the question said check for errors then we should checi if n  is out of range before moving on.
+    //* error checking is very common in the input section
+    
+
+    cout << "\ninput the elements of A one at a time\n";
+    for(i=0;i<n;i++) {
+        cin>> A[i];
+    }
+    
+    // 4. Control statements
+    
+    // try working a simple example by hand
+    // A = [-1,5,2]
+    // We know we can use a for loop to look at each element A[i]
+    // one at a time, how could we use that on a simple example:
+    // A = [-1,5,2]
+    //we can compare each value of A[i] to a current maximum value max_A
+    //--if the value of A[i] is larger then replace the value of max_A
+    
+   // max_A = A[0]; // option #1
+    max_A = -1e100; // option #2 pick a really bad value of max that will get replaced immediately
+    
+    for(i=0;i<n;i++) {
+        if(A[i] > max_A) max_A = A[i];
+    }
+    // 5. Expressions and operators
+    
+    //we already did that in the if statement above.
+    
+    // 6. Output
+    
+    cout << "\nmax_A = " << max_A;
+    
+    // 7. Debug and test.
+    // try different input combinations and see if the output is correct
+    cout <<"\ndone.\n";
+    return 0;
 }
