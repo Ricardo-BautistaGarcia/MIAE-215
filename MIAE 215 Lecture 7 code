@@ -50,8 +50,67 @@ int main()
         A[i][2] = temp; // copy backup of 3rd col into 2nd col
     }
     
-    //
+    //Arrays_part3
+    //example 1
+    char A[4];
+    A[0] = 'a';
+    A[1] = 'b';
+    A[2] = 'c';
+    A[3] = '\0'; // do not forget the terminaiton character
     
+    cout << "\nA = " << A;
     
+    //initialization during declaration e.g
+    
+    char B1[3] = {'1','2', '\0'};
+    cout << "\nB1 = " << B1;
+
+//example 2
+
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{ 
+     // its always a good idea to find the length of
+    // the input strings first when writing a string
+    // program. The reasin is that you can then use
+    // for loops to solve the problem.
+    
+    //new example
+    int i, nA, nB;
+    char A[] = "hello", B[6] = "world", C[11]; // convention is B[# of ch in strings + 1]="string";
+    
+    // count the number of ch in the string
+    i=0
+    while(1) {
+        if(A[i]== '\0') break;
+        i==;
+    }
+    nA = i;
+    
+    // a shorter alternative for your toolbox
+    i=0
+    while(B[i] != '\0) i++;
+    nB = i;
+b
+    cout << "\nnA = " << nA;        
+    cout << "\nnB = " << nB;
+    
+    //now join hello and world to spell helloworld
+    
+    for(i=0;i<nA;i++) C[i]=A[i]; // copy A into C
+    
+    for(i=0;i<nB;i++) C[] = B[i=nA]; // copy B onto the end of of A/C
+    
+    for(i=nA;i<nA+nB;i++) C[i] = B[i-nA];
+    
+    C[i] = '\0';
+    C[nA+nB]= '\0';
     cout << "\ndone.\n";
 return 0;
