@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <fstream> //needed for ifstream/ fin
+
+using namespace std;
+
+int main()
+
+{ 
+    
+   // Arrays_part 2 Q3
+    
+    int i, j, n=3;  
+    double A[4][4], temp [4][4];
+    ifstream fin;
+    
+    // open file
+    fin.open("A.txt);
+    
+    // Check for file open error
+    if ( !fin) {
+        cout<< "\nerror opening input file";
+        exit(1);
+    }
+    // we assume that the matrix will be a 3x3, it does not matter
+    // how we type it in the text file. You already defined the size
+    // at the top with A[4][4]. You can write the matrix size at the top.
+    
+    for(i=1;i<=n;i++) {
+        for(j=1;j<=n;j++) {
+            fin >> A[i][j];
+            cout << A[i][j] << "";
+        }
+        cout << "\n";
+    }
+    
+    // close input file stream
+    fin.close();
+    
+    // calculate the norm of the 3rd col of A and print it out
+    
+    //swap second and third column of A
+    // key to swapping is to use a temp variable to store the values we replace
+    // we can swap one row of the column at a time
+    // so using a for loop for i will work for that. SAVE THIS TO TOOLBOX COde
+    for(i=1;i<=n;i++) {
+        temp=A[i][3]; // make a backup first
+        A[i][3] = A[i][2]// copy second column into 3rd col
+        A[i][2] = temp; // copy backup of 3rd col into 2nd col
+    }
+    
+    //
+    
+    
+    cout << "\ndone.\n";
+return 0;
