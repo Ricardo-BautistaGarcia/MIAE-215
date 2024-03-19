@@ -1,1 +1,125 @@
+#include <iostream>
+#include <string>
+#include <cmath>
 
+using namespace std;
+
+/*
+double cube(double x);
+void calculate_function(int i, double x);
+void print_hello();
+
+int main() // make tables for each function
+
+{
+    double z, y; //1
+    z=2; //2
+    y= cube(z); // 3 -> y=125
+    cout << "\ny = "<< y; //6
+    
+    cube(y); // 10 
+    
+    //output:
+    
+    z=1.0; //10
+    calculate function
+
+
+ cout << "\ndone.\n";
+return 0;
+
+}
+
+
+double cube(double x)
+{
+    cout << "\ncalculating cube ... "; // 4 (x=2), 8 (x=125)
+    
+    return x*x*x; // 5 (return 5*5*5 =125) 9 (return 125^3)
+}
+
+void caluclate_function(int i, double x)
+{
+    if( i==1) {
+        cout << \nfunction = " << sin(x);
+    } else if ( i == 2 ) {
+        cout << "\nfunction = " << cos(x);
+    } else if ( i == 3) {
+//    return(); we could add this
+    } else {
+        cout << "\n unknown function, i = " << i;
+    }
+}
+
+*/
+
+//Q) write a function called y_series(x,n) that calculates and returns the value y given by the series below
+// y= 1 + 1/x + 1/x^2 + 1/x^3 + ... + 1/x^n 
+
+
+double y_series(double x, int n); // this is similar to declaring a function like a variable. It would be before main()
+
+double y_series(double x, int n)
+{
+    int i; // never use the same name for the local varaible as for the function variable e.g. n and i should be different
+    double y;
+    // if we were asked to check for errors we could do the following
+    if( abs (x) < 1e-7) {
+        cout << "\nerror x is close to zero";
+        return 0.0; // return any type of couble
+    }
+    if ( n < 0){
+        cout << "\nn is less than zero";
+        return 0.0; // return any type of int
+    }
+    
+    
+    // y= 1 + 1/x + 1/x^2 + 1/x^3 + ... + 1/x^n 
+    y=1;
+    for(i=1;i<=n;i++_ y += 1/pow(x,i);
+        
+    return y;
+}
+/
+
+// where do the function arguments (x and n) come from?
+
+//ANS: The function arguments come from the function that is calling the function (e.g. main)
+
+// can we assume the arguments have been set previously
+
+// yes, we can ssume they have been set by the calling function such as main
+    
+
+// Q2: Write a function called sin_xy(z,x,y)
+// that calculates z= sin(x^2 + y^2)
+
+//  indicate which arguments should be called by value or by reference:
+
+// value: x, y
+// reference: z
+
+// create the prototype before the main
+
+
+sin_xy(double &z, double x, double y);
+
+int main()
+{
+    // this is for illustrative purposes only, not required for the solution
+    //here we will use it for testing
+    double x,y,z;
+    
+    x=1.0;
+    y=2.0;
+    
+    cout << "\ndone.\n Press enter to continue . \n"
+    getchar();
+    
+    return 0;
+    }
+
+void sin_xy(double &z, double x, double y);
+{
+    z=sin(x*x + y*y);
+}
