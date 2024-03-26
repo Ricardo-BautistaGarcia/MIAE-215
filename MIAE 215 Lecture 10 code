@@ -1,1 +1,232 @@
+// this lecture expands on functions for 1 and 2 D arrays
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+double average_2D_array(double A[2][3]); // remember for specifying 2D arrays, you can only specify the number of columns
+// ex double average_2D_array(double A[][#], int nrow); where nrow is the # of rows
+// arrays cannot have a variable size
+
+int main()
+
+{
+    double A[2][3]= {1,2,3,4,5,6};
+    double ave;
+    
+    ave = average_2D_array(A);
+    cout << "\nave = " << ave;
+    
+    
+    cout << "\ndone.\n";
+    return 0;
+    
+
+}
+
+double average_2D_array(double A[2][3]);
+{
+    int i,j,n=2,m=3;
+    double sum=0;
+    
+    for(i=0;i<n;i++) {
+        for(j=0;j<m;i++){
+            sum+= A[i][j];
+        }
+    }
+    return sum/(n*m);
+}
+
+/*
+double average_array(double A[], int n)
+{
+    int i;
+    double sum;
+    
+    sum=0;
+    for(i=0;i<n;i++) {
+        sum += A[i];
+    }
+    
+    // A[0] = 7.7; // since arrays such as A are always called by reference A[0]
+    // will be changed by A
+    return sum/n;
+
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+// this is amongst the hardest problems for functions. Example 3 matrix algebra
+
+double norm(double A[], int n);
+
+void norm2(double A[], int n, double &q);
+
+// inputs A, n (information supplied to the function
+// outputs: q (information being calculated by the function
+
+// value: n
+// reference: q (output must be called by ref)
+// A (arrays are always called by ref)
+
+double dot_product(double v1[], double v2[], int n];
+
+void multiply(A [4][4],x[],b[]);
+
+//input: A, x
+// output: b
+
+// value: we would like to have inputs as value if possible but in this case A,x and b are arrays.
+// reference: A,x,b (arrays are always called by reference)
+
+
+
+
+int main()
+{
+    double A[4][4], x[4], b[4];
+    double v1[4]={0.0};
+    double v2[4]={0,1,2,3};
+    double ans;
+    
+    
+    cout << "\ndone.\n";
+return 0;
+
+}
+
+double norm(double A[], int n);
+{
+    int i;
+    double sum =0;
+    for(i=1;i<=n;i++) sum += A[i]*A[i];
+    return sqrt(sum);
+}
+
+void norm2(double A[], int n, double &q);
+{
+    // use your exsisting norm function/building block
+    // call friends / posee / homies
+    q=double norm(A,n);
+    
+    // you could also write something like what is in norm(A,n) but that is the hard way
+}
+
+void multiply(A [4][4],x[],b[]);
+{
+    // always make a little example and study it
+    
+    int i;
+    double sum =0;
+    
+    for(i=1;i<n;i++){
+        // v1= row_i
+        // let v1 be a copy of row i, i.e. v1 = row_i
+        for (i=1;i<=n;i++) v1[j] = A[i][j];
+        // remember to call your homie dot(row_i,x);
+        //b[i] = dot(row_i, x);
+        
+        b[i]= dot_product(v1[],x,n);
+    }
+    
+    
+    
+}
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+double sum_function=0.0; // must be declared before all functions that use it
+
+ofstream fout_sum("sum.txt");
+
+// such global output file streams are useful for debugging
+// think of global output file variable
+
+double sum(double x);
+
+//input: x
+//output: sum_function (global variable, data in "sum.txt"
+
+// value: x
+// referennce: none -- global variables don't count
+
+int main()
+{
+    
+    
+    
+    cout << "\ndone.\n";
+    return 0;
+    
+}
+
+double sum(double x);
+{
+    if(x >1e10) {
+        sum_function =0;
+        x=0;
+    }
+    
+    // double sum_function;
+        // this local variable does not work because locals are lost/erased
+        // at the end of the function -- i.e. they are not remembered between
+        // function calls -- we need to use a global variable for that.
+    sum_function += x;
+    
+   // ofstream fout_sum("sum.txt");
+        // the above file output stream wont work for similar reasons to
+        // sum_function above. We need a global vairable for fout_sum.
+    fout_sum << x << "\n";
+        
+    return
+}// fout_sum is closed and erased here if it were a local varible    
+
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int string_length(char A[]); // we dont need n since we can find that using an infintie while loop that looks for '\0'
+
+void string_cat(char A[],char B[], char C[]);
+
+// input: A,B
+// output: C
+
+
+int main()
+{
+    
+    cout << "\ndone.\n";
+    return 0;
+
+}
+
+int string_length(char A[]);
+{
+    int i =0;
+    while( A[i] != '\0' ) i++;
+    return i;
+}
+
+void string_cat(char A[],char B[], char C[]);
+{
+    // call your posee (function)
+    nA=string_length(A);
+    nA=string_length(B);
+    for (i=0;i<nA;i++) C[i] =A[i];
+    
+
+
 
