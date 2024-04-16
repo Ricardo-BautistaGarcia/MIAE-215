@@ -1,0 +1,28 @@
+int motor_pin=9;
+int j_data;
+#include <Servo.h>
+Servo servo1;
+
+#include <HCSR04.h>
+HCSR04 hc(2, 3); //initialisation class HCSR04 (trig pin , echo pin)
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  servo1.attach(motor_pin);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  j_data=analogRead(A0);
+  j_data=map(j_data,0,1023,0,180);
+  //Serial.println(j_data);
+
+  servo1.write(j_data);
+
+  Serial.println( hc.dist() ); //return current distance (cm) in serial
+    delay(60);
+
+}
